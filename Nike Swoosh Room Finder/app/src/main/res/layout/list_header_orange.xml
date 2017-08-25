@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/searchHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Section"
+        android:textColor="@color/NikeOrange"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+</LinearLayout>

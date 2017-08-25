@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="170dip"
+    android:background="@color/veryDarkGray">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="30dp"
+        android:background="@color/lightGray"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:height="30dp"
+        android:clickable="true"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/cancel"
+        android:tint="@color/iconColor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:text="Would you like to add this location to your favorites?"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/yes"
+        android:background="@drawable/orangebgroundedcorners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/buttonText"
+        android:text="       YES       "
+        android:height="30dp"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_below="@+id/prompt"
+        android:layout_alignLeft="@+id/prompt"
+        android:layout_alignStart="@+id/prompt"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/no"
+        android:background="@drawable/orangebgroundedcorners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/buttonText"
+        android:text="       NO       "
+        android:height="30dp"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_alignBaseline="@+id/yes"
+        android:layout_alignBottom="@+id/yes"
+        android:layout_toLeftOf="@+id/cancel"
+        android:layout_toStartOf="@+id/cancel" />
+
+</RelativeLayout>

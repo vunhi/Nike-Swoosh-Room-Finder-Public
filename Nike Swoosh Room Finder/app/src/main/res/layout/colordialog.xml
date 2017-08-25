@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="210dip"
+    android:background="@color/veryDarkGray"
+    android:id="@+id/color">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="30dp"
+        android:background="@color/lightGray"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:height="30dp"
+        android:clickable="true"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/cancel"
+        android:tint="@color/iconColor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="Pick your color scheme:"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/neongreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:textSize="15dp"
+        android:text="Nike Green"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="95dp" />
+
+    <TextView
+        android:id="@+id/orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:textSize="15dp"
+        android:text="Nike Orange"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="95dp" />
+
+    <CheckBox
+        android:id="@+id/checkneongreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginLeft="60dp"
+        android:buttonTint="@color/colorSecondary"/>
+
+    <CheckBox
+        android:id="@+id/checkorange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="114dp"
+        android:layout_marginLeft="60dp"
+        android:buttonTint="@color/colorSecondary"/>
+
+    <TextView
+        android:id="@+id/submit"
+        android:background="@drawable/greenbgroundedcorners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/buttonText"
+        android:text="       Submit       "
+        android:height="30dp"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

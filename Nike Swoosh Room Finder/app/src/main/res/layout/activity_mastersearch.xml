@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.groupc.officelocator.masterSearchWithHeaders">
+
+    <!-- Universal Layout -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/theme_layout" />
+
+    <!-- Fixed elements on screen that are unique to the page -->
+
+    <!-- Bottom Navigation Toolbar -->
+    <!-- had to pull out of universal layout cause I could not get it working in the java classes -->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom = "true"
+        app:itemIconTint="@drawable/greennavigation"
+        app:itemTextColor="@drawable/greennavigation"/>
+
+    <!-- Page Title -->
+    <TextView
+        android:id="@+id/searchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="5dp"
+        android:text="Search"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/pageTitles"/>
+
+    <!-- Search Listview + search bar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="60dp"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true">
+
+    <!-- Search bar where the user enters in the search term -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:background="@drawable/rectangleborder"
+        android:backgroundTint="@color/colorSecondary"
+        android:textColorHint="@color/pageTitles"
+        android:hint="Search Swoosh Room Finder"
+        android:textColor="@color/pageTitles"
+        android:textSize="14sp"
+        android:paddingTop="8dp"
+        android:paddingLeft="45dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:drawableBottom="@android:color/transparent"
+        android:textCursorDrawable="@null"
+        android:maxLines="1"/>
+
+    <!-- List of all search values -->
+    <ListView
+        android:id="@+id/searchList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="62dp">
+    </ListView>
+
+    <!-- Empty Search Listview -->
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No matching results"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>
+
+    <!-- Empty Search Listview -->
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginLeft="10dp"
+        android:tint="@color/darkGray"
+        app:srcCompat="@drawable/search" />
+
+    <Button
+        android:id="@+id/colors"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

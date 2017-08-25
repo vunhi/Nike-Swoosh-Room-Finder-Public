@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <external-path path="Android/data/${applicationId}/" name="files_root" />
+
+    <root-path
+        name="root"
+        path="/" />
+
+</paths>

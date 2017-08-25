@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+*      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+*      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+*      Please see the file COPYRIGHT in the source               *
+*      distribution of this software for further copyright       *
+*      information and license terms.                            *
+****************************************************************-->
+
+<!-- This is the Universal Layout that each activity page utilizes -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/universal_layout">
+
+    <!-- Top color bar -->
+    <View
+        android:id="@+id/gradientBlock"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/greengradient"
+        android:layout_alignParentTop="true" />
+
+    <!-- Bottom navigation toolbar divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/secondDarkestGray"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"/>
+
+    <!-- Nike Swoosh Logo -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/nikeswooshblack"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:tint="@color/veryDarkGray"/>
+
+    </RelativeLayout>

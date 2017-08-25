@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<campus campusName="Nike" numberOfBuildings = "16">
+    <building buildingName="Alberto Salazar" numberOfFloors="1">
+        <floor level="1" src="albertosalazar1">
+            <room roomName="Cross Country"/>
+            <room roomName="Long Distance"/>
+            <room roomName="Marathon"/>
+        </floor>
+    </building>
+    <building buildingName="Bo Jackson" numberOfFloors="1">
+        <floor level="1" src="bojackson1">
+            <room roomName="Auburn"/>
+            <room roomName="Football"/>
+            <room roomName="Running Back"/>
+        </floor>
+    </building>
+    <building buildingName="Dan Fouts" numberOfFloors="1">
+        <floor level="1" src="danfouts1">
+            <room roomName="Fuel Band"/>
+            <room roomName="Hypervenom"/>
+            <room roomName="Terminator"/>
+        </floor>
+    </building>
+    <building buildingName="Jerry Rice" numberOfFloors="1">
+        <floor level="1" src="jerryrice1">
+            <room roomName="Catches"/>
+            <room roomName="Wide Receiver"/>
+            <room roomName="Receptions"/>
+        </floor>
+    </building>
+    <building buildingName="Joan Benoit Samuelson" numberOfFloors="1">
+        <floor level="1" src="joanbenoitsamuelson1">
+            <room roomName="Aeroloft"/>
+            <room roomName="Dynamic Fit"/>
+            <room roomName="Flyease"/>
+        </floor>
+    </building>
+    <building buildingName="John McEnroe" numberOfFloors="1">
+        <floor level="1" src="johnmcenroe1">
+            <room roomName="Deuce"/>
+            <room roomName="Doubles"/>
+            <room roomName="Tennis"/>
+        </floor>
+    </building>
+    <building buildingName="Ken Griffey Jr" numberOfFloors="1">
+        <floor level="1" src="kengriffeyjr1">
+            <room roomName="First Base"/>
+            <room roomName="Junior"/>
+            <room roomName="Outfield"/>
+        </floor>
+    </building>
+    <building buildingName="Mia Hamm" numberOfFloors="2">
+        <floor level="1" src="miahamm1">
+            <room roomName="Air Max"/>
+            <room roomName="Cachana"/>
+            <room roomName="Flyknit"/>
+            <room roomName="Grind"/>
+            <room roomName="Mercurial Vapor"/>
+        </floor>
+        <floor level="2" src="miahamm2">
+            <room roomName="Kobe Mamba"/>
+            <room roomName="LunarCharge"/>
+        </floor>
+    </building>
+    <building buildingName="Michael Jordan" numberOfFloors="1">
+        <floor level="1" src="michaeljordan1">
+            <room roomName="Basketball"/>
+            <room roomName="Chicago Bulls"/>
+            <room roomName="MVP"/>
+        </floor>
+    </building>
+    <building buildingName="Mike Schmidt" numberOfFloors="1">
+        <floor level="1" src="mikeschmidt1">
+            <room roomName="Phillies"/>
+            <room roomName="Shortstop"/>
+            <room roomName="Third Baseman"/>
+        </floor>
+    </building>
+    <building buildingName="Nike Child Development Center" numberOfFloors="1">
+        <floor level="1" src="nikechilddevelopmentcenter1">
+            <room roomName="Softball"/>
+            <room roomName="Swimming"/>
+            <room roomName="Volleyball"/>
+        </floor>
+    </building>
+    <building buildingName="Nike Sports Center" numberOfFloors="1">
+        <floor level="1" src="nikesportscenter1">
+            <room roomName="Phil Knight"/>
+            <room roomName="Shoe Dog"/>
+            <room roomName="Sports"/>
+        </floor>
+    </building>
+    <building buildingName="Nolan Ryan" numberOfFloors="1">
+        <floor level="1" src="nolanryan1">
+            <room roomName="Curveball"/>
+            <room roomName="Homerun"/>
+            <room roomName="Strikeout"/>
+        </floor>
+    </building>
+    <building buildingName="Pete Sampras" numberOfFloors="1">
+        <floor level="1" src="petesampras1">
+            <room roomName="Haiyan Wu"/>
+            <room roomName="Michelle Wie"/>
+            <room roomName="Suzann Pettersen"/>
+        </floor>
+    </building>
+    <building buildingName="Steve Prefontaine Hall" numberOfFloors="1">
+        <floor level="1" src="steveprefontainehall1">
+            <room roomName="Adriana Leon"/>
+            <room roomName="Alex Morgan"/>
+            <room roomName="Eliud Kipchoge"/>
+        </floor>
+    </building>
+    <building buildingName="Tiger Woods Center" numberOfFloors="2">
+        <floor level="1" src="tigerwoodscenter1">
+            <room roomName="Air Jordan"/>
+            <room roomName="Roshe"/>
+        </floor>
+        <floor level="2" src="tigerwoodscenter2">
+            <room roomName="Pegasus"/>
+            <room roomName="VaporMax"/>
+        </floor>
+    </building>
+
+</campus>

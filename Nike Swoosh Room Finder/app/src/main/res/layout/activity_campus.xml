@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.groupc.officelocator.campus">
+
+    <!-- Universal Layout -->
+    <include
+        android:id="@+id/universal_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/theme_layout" />
+
+    <!-- Fixed elements on screen that are unique to the page -->
+
+    <!-- Bottom Navigation Toolbar -->
+    <!-- had to pull out of universal layout cause I could not get it working in the java classes -->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom = "true"
+        app:itemIconTint="@drawable/greennavigation"
+        app:itemTextColor="@drawable/greennavigation"/>
+
+    <!-- Page Title -->
+    <TextView
+        android:id="@+id/campus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="5dp"
+        android:text="@string/campus_name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/pageTitles"/>
+
+    <!-- Zoomable aspect of the page: the campusorange map + building buttons -->
+    <com.groupc.officelocator.ZoomLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_campus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="60dp"
+        android:paddingBottom="60dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.groupc.officelocator.campus"
+            android:id="@+id/zoom">
+
+            <!-- Campus Map -->
+            <ImageView
+                android:id="@+id/campusmap"
+                android:layout_width="420dp"
+                android:layout_height="480dp"
+                app:srcCompat="@drawable/campus"
+                android:paddingBottom="40dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <!-- Tiger Woods Center Button -->
+            <Button
+                android:id="@+id/tigerwoodscenter"
+                android:background="@android:color/transparent"
+                android:layout_width="68dip"
+                android:layout_height="19dip"
+                android:layout_marginLeft="213dp"
+                android:layout_marginTop="58dp" />
+
+            <!-- Mia Hamm Button -->
+            <Button
+                android:id="@+id/miahamm"
+                android:background="@android:color/transparent"
+                android:layout_width="10dip"
+                android:layout_height="61dip"
+                android:layout_marginTop="105dp"
+                android:layout_marginLeft="24dp"/>
+
+            <!-- Jerry Rice Button -->
+            <Button
+                android:id="@+id/jerryrice"
+                android:layout_width="55dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="115dp"
+                android:layout_marginTop="54dp"
+                android:background="@android:color/transparent" />
+
+            <!-- Pete Sampras Button -->
+            <Button
+                android:id="@+id/petesampras"
+                android:background="@android:color/transparent"
+                android:layout_width="47dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="110dp" />
+
+            <!-- Ken Griffey Jr. Button -->
+            <Button
+                android:id="@+id/kengriffeyjr"
+                android:layout_width="10dp"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="79dp"
+                android:layout_marginTop="110dp"/>
+
+            <!-- Nike Sports Center Button -->
+            <Button
+                android:id="@+id/nikesportscenter"
+                android:layout_width="38dp"
+                android:layout_height="29dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="246dp"
+                android:layout_marginLeft="52dp"/>
+
+            <!-- Nolan Ryan Button -->
+            <Button
+                android:id="@+id/nolanryan"
+                android:layout_width="38dp"
+                android:layout_height="18dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="315dp"
+                android:layout_marginLeft="120dp"/>
+
+            <!-- Mike Schmidt Button -->
+            <Button
+                android:id="@+id/mikeschmidt"
+                android:background="@android:color/transparent"
+                android:layout_width="9dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="290dp"
+                android:layout_marginLeft="222dp"/>
+
+            <!-- Bo Jackson Button -->
+            <Button
+                android:id="@+id/bojackson"
+                android:background="@android:color/transparent"
+                android:layout_width="42dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="369dp"
+                android:layout_marginLeft="273dp"/>
+
+            <!-- Michael Jordan Button -->
+            <Button
+                android:id="@+id/michaeljordan"
+                android:background="@android:color/transparent"
+                android:layout_width="86dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="340dp"
+                android:layout_marginLeft="263dp"/>
+
+            <!-- Joan Benoit Samuelson Button -->
+            <Button
+                android:id="@+id/joanbenoitsamuelson"
+                android:background="@android:color/transparent"
+                android:layout_width="33dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="298dp"
+                android:layout_marginLeft="286dp"/>
+
+            <!-- John McEnroe Button -->
+            <Button
+                android:id="@+id/johnmcenroe"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="272dp"
+                android:layout_marginLeft="327dp" />
+
+            <!-- Steve Prefontaine Hall -->
+            <Button
+                android:id="@+id/steveprefontainehall"
+                android:background="@android:color/transparent"
+                android:layout_width="17dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="174dp"
+                android:layout_marginLeft="300dp"
+                />
+
+            <!-- Alberto Salazar Button -->
+            <Button
+                android:id="@+id/albertosalazar"
+                android:background="@android:color/transparent"
+                android:layout_width="20dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="195dp"/>
+
+            <!-- Dan Fouts Button -->
+            <Button
+                android:id="@+id/danfouts"
+                android:background="@android:color/transparent"
+                android:layout_width="56dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="155dp"
+                android:layout_marginLeft="295dp"/>
+
+            <!-- Nike Child Development Center Button -->
+            <Button
+                android:id="@+id/nikechilddevelopmentcenter"
+                android:background="@android:color/transparent"
+                android:layout_width="66dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="265dp"
+                android:layout_marginTop="96dp"/>
+
+        </RelativeLayout>
+
+    </com.groupc.officelocator.ZoomLayout>
+
+    <!-- "Satellite View Button -->
+    <ImageButton
+        android:id="@+id/satelliteViewButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/globe"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true" />
+
+    <!-- "Select a Building or Search Prompt -->
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selecttxt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="10sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/colors"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

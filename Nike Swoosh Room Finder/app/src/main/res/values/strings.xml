@@ -1,0 +1,14 @@
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<resources>
+    <string name="app_name">Swoosh Room Finder</string>
+    <string name="campus_name">Nike World Headquarters</string>
+    <string name="selecttxt">Select A Building Or Search</string>
+
+</resources>

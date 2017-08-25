@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="200dip"
+    android:background="@color/veryDarkGray">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="30dp"
+        android:background="@color/lightGray"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:height="30dp"
+        android:clickable="true"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/cancel"
+        android:tint="@color/iconColor"
+        android:id="@+id/cancel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:text="Save in Favorites as:"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/submit"
+        android:background="@drawable/orangebgroundedcorners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/buttonText"
+        android:text="       SUBMIT      "
+        android:height="30dp"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/savetofavorites"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/savetofavorites"
+        style="@style/Widget.AppCompat.EditText"
+        android:textColor="@color/colorSecondary"
+        android:background="@drawable/rectangleborder"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/prompt"
+        android:layout_alignStart="@+id/prompt"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"/>
+
+</RelativeLayout>

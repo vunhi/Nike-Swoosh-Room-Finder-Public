@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.groupc.officelocator.masterSearchWithHeaders">
+
+    <!-- Universal Layout -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/theme_layout" />
+
+    <!-- Fixed elements on screen that are unique to the page -->
+
+    <!-- Bottom Navigation Toolbar -->
+    <!-- had to pull out of universal layout cause I could not get it working in the java classes -->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom = "true"
+        app:itemIconTint="@drawable/greennavigation"
+        app:itemTextColor="@drawable/greennavigation"/>
+
+    <!-- Page Title -->
+    <TextView
+        android:id="@+id/favoritestitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:paddingTop="5dp"
+        android:text="My Favorites"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/pageTitles"/>
+
+    <!-- List of favorites -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="61dp">
+
+        <ListView
+            android:id="@+id/favoritesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="62dp">
+        </ListView>
+    </LinearLayout>
+
+    <!-- Empty list view -->
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="No favorites added"
+        android:visibility="gone"
+        />
+
+    <ImageButton
+        android:id="@+id/clearAll"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="64dp"
+        app:srcCompat="@drawable/trash"
+        android:background="@android:color/transparent"
+        android:tint="@color/iconColor"/>
+
+    <Button
+        android:id="@+id/colors"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<resources>
+    <color name="colorPrimary">#ccff00</color>
+    <color name="colorPrimaryDark">#A3CC00</color>
+    <color name="colorSecondary">#FFFFFF</color>
+    <color name="colorAccent">#000000</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="darkGray">#808080</color>
+    <color name="veryDarkGray">#303030</color>
+    <color name="secondDarkestGray">#3c3c3c</color>
+    <color name="iconColor">#FFFFFF</color>
+    <color name="markerColor">#A3CC00</color>
+    <color name="pageTitles">#303030</color>
+    <color name="spinnerText">#303030</color>
+    <color name="buttonText">#303030</color>
+    <color name="white">#FFFFFF</color>
+    <color name="backgroundColor">#303030</color>
+
+    <color name="NikeGreen">#ccff00</color><!-- Nike Neon Green color -->
+    <color name="NikeGreenDark">#A3CC00</color>
+    <color name="NikeOrange">#FF6600</color>
+    <color name="NikeOrangeDark">#db5700</color>
+</resources>
+

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.groupc.officelocator.campus">
+
+    <!-- Universal Layout -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/theme_layout" />
+
+    <!-- Zoomable floorplan image -->
+    <com.groupc.officelocator.ZoomLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_floorplan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="62dp"
+        android:paddingBottom="160dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.groupc.officelocator.floorplan"
+            android:id="@+id/zoom">
+
+            <ImageView
+                android:id="@+id/floorPlanImage"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                app:srcCompat="@drawable/nikesportscenter1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/philknight"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="75dp"
+                android:tint="@color/markerColor"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/locate" />
+
+            <ImageView
+                android:id="@+id/shoedog"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="212dp"
+                android:layout_marginTop="169dp"
+                android:tint="@color/markerColor"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/locate" />
+
+            <ImageView
+                android:id="@+id/sports"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="206dp"
+                android:layout_marginTop="77dp"
+                android:tint="@color/markerColor"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/locate" />
+
+
+        </RelativeLayout>
+    </com.groupc.officelocator.ZoomLayout>
+
+    <!-- Floor spinner prompt -->
+    <TextView
+        android:id="@+id/floorSpinnerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/floorSelector"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:text="Floor:" />
+
+    <!-- Floor spinner -->
+    <Spinner
+        android:id="@+id/floorSelector"
+        android:background="@drawable/greenbgroundedcorners"
+        android:layout_width="210dip"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Floor spinner drop down arrow -->
+    <ImageView
+        android:layout_width="16dip"
+        android:layout_height="16dip"
+        android:src="@drawable/drop"
+        android:id="@+id/imageView7"
+        android:layout_alignBottom="@+id/floorSpinnerTitle"
+        android:layout_alignStart="@+id/imageView10" />
+
+    <!-- Room spinner prompt -->
+    <TextView
+        android:id="@+id/roomSpinnerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/roomSelector"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:visibility="visible"
+        android:text="Room:" />
+
+    <!-- Room spinner -->
+    <Spinner
+        android:background="@drawable/greenbgroundedcorners"
+        android:id="@+id/roomSelector"
+        android:layout_width="210dip"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:visibility="visible" />
+
+    <!-- Room spinner drop down arrow -->
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="16dip"
+        android:layout_height="16dip"
+        android:layout_marginLeft="258dp"
+        android:layout_alignTop="@+id/roomSelector"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/drop"
+        android:visibility="visible"/>
+
+    <!-- Building + Floor header -->
+    <TextView
+        android:id="@+id/floorPlanName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Building + Floor"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/pageTitles"/>
+
+    <!-- Room name header -->
+    <TextView
+        android:id="@+id/roomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room Name"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:textColor="@color/pageTitles"/>
+
+    <!-- Building locator button -->
+    <ImageButton
+        android:id="@+id/buildinglocator"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/locator"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:tint="@color/iconColor"/>
+
+    <!-- Favorites button -->
+    <ImageButton
+        android:id="@+id/favorite"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/favorite"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:tint="@color/iconColor"/>
+
+    <!-- Bottom navigation toolbar -->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom = "true"
+        app:itemIconTint="@color/colorSecondary"
+        app:itemTextColor="@color/colorSecondary" />
+
+    <!-- Room Spinner Disabled Button -->
+    <Button
+        android:id="@+id/instructionButton"
+        android:layout_width="210dip"
+        android:layout_height="40dip"
+        android:background="@android:color/transparent"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/roomSelector"
+        android:layout_toEndOf="@+id/roomSpinnerTitle" />
+
+    <Button
+        android:id="@+id/colors"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"/>
+
+    <!-- Share button -->
+    <ImageButton
+        android:id="@+id/share"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/share" />
+
+</RelativeLayout>

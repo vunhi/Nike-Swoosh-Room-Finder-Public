@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- **************************************************************
+ *      Copyright (c) 2017 Nhi Vu, Victor Diego, Tyler Wood       *
+ *      Zachary Pfister-Shanders, Derek Keeton, Chris Norton      *
+ *      Please see the file COPYRIGHT in the source               *
+ *      distribution of this software for further copyright       *
+ *      information and license terms.                            *
+****************************************************************-->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_spinner"
+    android:textColor="@color/spinnerText"
+    android:textSize="14sp"
+    android:text="Select"
+    android:padding="5dp"
+    android:background="@drawable/orangebgroundedcorners"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
