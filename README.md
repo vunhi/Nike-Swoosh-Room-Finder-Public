@@ -9,7 +9,7 @@ The Swoosh Room Finder is an android application that helps users navigate their
 
 There are 3 key features in this mobile app: 1) an interactive map, 2) a search function, and 3) a favorites page. The user can navigate through the campus and find information for a building through the interactive campus map, they can search for a room through the search function, and they can save locations to a Favorites page for future use. The user can also share images of a room and building in the campus with someone else through a share feature. They can also choose between two color themes in the app (Nike Green and Nike Orange). 
 
-All buildings on the campus map are clickable. Currently the only two buildings that have data for multiple floors are Mia Hamm and Tiger Woods Center. The floor plans used in this application are mock floor plans, not actual Nike floor plans. This is a beta version not ready for proper release; much of the code still needs to simplified, improved, and further tested. 
+All buildings on the campus map are clickable. All floor plans used in this repository are mock floor plans, not actual Nike floor plans. This is a beta version not ready for proper release; much of the code still needs to simplified, improved, and further tested. 
 
 ## Build
 The Minimum API Level for the Swoosh Room Finder application is 22. The mobile device or emulator running the application must have an API greater than or equal to 22. There are different apks available for different resolutions as well as Nike official apks and public release apks that do and do not not contain confidential Nike floor plans respectively. This is a private repository so the confidential Nike floor plans will not be seen or distributed to those without permission. Placement of certain markers and buttons may be slightly off if used by a device with different sizing and resolution compared to the values listed for the apk versions. 
@@ -41,18 +41,18 @@ Note: there is a activity limit for these simulators on appetize.io. The link ma
 
 ## How to Use The Swoosh Room Finder
 
-#### [How to Navigate Through the Application](https://github.com/cnorton18/capstone2017/blob/nhi's-latest-branch/How%20to%20Use%20The%20Swoosh%20Room%20Finder.md)
+#### [How to Use The Application](https://github.com/vunhi/Nike-Swoosh-Room-Finder-Public/blob/master/Project%20Documents/How%20to%20Use%20The%20Swoosh%20Room%20Finder.md)
 
-#### [How to Add Floor Plans to the Application](https://github.com/cnorton18/capstone2017/blob/nhi's-latest-branch/How%20To%20Add%20New%20Floor%20Buildings%2C%20Floors%2C%20and%20Room.md)
+#### [How to Add Floor Plans to the Application](https://github.com/vunhi/Nike-Swoosh-Room-Finder-Public/blob/master/Project%20Documents/How%20To%20Add%20New%20Floor%20Buildings%2C%20Floors%2C%20and%20Room.md)
 
 
 ## Copyright
 
-For copyright information for this project see the [COPYRIGHT](https://github.com/vunhi/Nike-Swoosh-Room-Finder/blob/master/Project%20Documents/COPYRIGHT.md) file. 
+For copyright information for this project see the [COPYRIGHT](https://github.com/vunhi/Nike-Swoosh-Room-Finder-Public/blob/master/Project%20Documents/COPYRIGHT.md) file. 
 
 ## License 
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/vunhi/Nike-Swoosh-Room-Finder/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/vunhi/Nike-Swoosh-Room-Finder-Public/blob/master/LICENSE) file for details.
 
 
 ## Contact
