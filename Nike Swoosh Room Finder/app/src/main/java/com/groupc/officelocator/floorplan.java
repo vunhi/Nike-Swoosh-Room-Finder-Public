@@ -51,9 +51,16 @@ import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+/*
+This class manages the floorplan activity of the application; this consists of the navigation toolbar,
+color change, adding to the favorites list, and display/navigation between distinct floorplans in
+the selected building. Each floor chosen by a user is loaded on a new layout.
+ */
+
 public class floorplan extends AppCompatActivity {
 
     RelativeLayout relativeLayout;
+
     public static int buildingselected = 0; //Tracks which building
     public static int setRoomfromSearch = 0; //Determines if a room was chosen in Search
     public static int floorselected = 0; //Determines if a floor number was chosen in Search or through Spinner
@@ -102,6 +109,7 @@ public class floorplan extends AppCompatActivity {
         floorSet();
     }
 
+    //Sets room spinnner.
     private void select() {
         if (floorNumber.equals("Choose a floor")) {
             //Disable Room spinner
@@ -911,17 +919,21 @@ public class floorplan extends AppCompatActivity {
     //Ensures proper reset on back button navigation
     @Override
     public void onBackPressed() {
+        //Simulates coming from search screen on back button pressed.
         fromSearch = 1;
         super.onBackPressed();
     }
 
+    //Behavior for return from back button pressed.
     @Override
     public void onResume() {
 
+        //OnResume runs once on activity start; this runs if coming from back.
         if(firstRun==1) {
             fromSearch = 1;
-            recreate();
+            recreate(); //Activity reset to set colors.
         }
+        //Runs if first run. Resets flag for tracking whether first run.
         else
             firstRun = 1;
 

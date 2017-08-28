@@ -13,6 +13,11 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
+/*
+Primary application data structure. Consists of 3 nested class declarations, building, room,
+and floor, each of which contains corresponding data elements. Each class implements the
+Parcelable interface to enable transfer of class objects between activities.
+ */
 public class mapdata implements Parcelable{
 
     static public class building implements Parcelable {
@@ -103,7 +108,6 @@ public class mapdata implements Parcelable{
         public String roomName;
 
         room() {roomName = null;}
-        room(String newName) {this.roomName = newName;}
 
         @Override
         public int describeContents() {

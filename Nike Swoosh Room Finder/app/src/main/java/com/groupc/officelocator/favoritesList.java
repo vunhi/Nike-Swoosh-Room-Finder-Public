@@ -273,7 +273,6 @@ public class favoritesList extends AppCompatActivity {
             }
         });
 
-
         //User clicks on button to clear Favorites List
         clearAll = (ImageButton)findViewById(R.id.clearAll);
         createClearDialog();
@@ -395,7 +394,7 @@ public class favoritesList extends AppCompatActivity {
     };
 
     //When the user presses the back button to get back to the Favorites page then the Favorites icon in the
-    //bottom navigation toolbar should be set
+    //bottom navigation toolbar should be set. Further, color setting is reset.
     @Override
     public void onResume(){
         //Bottom navigation toolbar. Set "FAVORITE" to checked

@@ -444,7 +444,7 @@ public class masterSearchWithHeaders extends AppCompatActivity {
     }
 
     //When the user presses the back button to get back to the Search page then the Search icon in the
-    //bottom navigation toolbar should be set
+    //bottom navigation toolbar should be set. Sets behavior for return after back.
     @Override
     public void onResume(){
         //Bottom navigation toolbar. Set "SEARCH" to checked
@@ -452,9 +452,11 @@ public class masterSearchWithHeaders extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.getMenu().getItem(1).setChecked(true);
 
+        //OnResume runs once on activity start; this runs if coming from back.
         if(firstRun==1) {
             recreate();
         }
+        //Runs if first run. Resets flag for tracking whether first run.
         else
             firstRun = 1;
         super.onResume();

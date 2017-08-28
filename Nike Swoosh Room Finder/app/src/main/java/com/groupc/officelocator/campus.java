@@ -29,8 +29,13 @@ import android.widget.TextView;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 
+/*
+This class sets the behavior for the campus map screen. Included is set-up of layout elements,
+including listener events for satellite option, navigation bar, color change, all campus buildings.
+ */
 public class campus extends AppCompatActivity {
-        RelativeLayout relativeLayout;
+
+    RelativeLayout relativeLayout;
 
     public mapdata data; //Parses building data
     public ImageButton satelliteview; //Button to switch between campus maps and satellite views
@@ -72,6 +77,8 @@ public class campus extends AppCompatActivity {
                 android.os.Process.killProcess(android.os.Process.myPid());
             Button[] buttons = new Button[data.buildings.size()];
 
+            //Sets Listener Events for all campus building buttons and sets appropriate
+            //variables for floorplan class.
             for (int i = 0; i < data.buildings.size(); i++) {
                 final int j = i;
 
@@ -177,7 +184,7 @@ public class campus extends AppCompatActivity {
     };
 
     //When the user presses the back button to get back to the Home page then the Home icon in the
-    //bottom navigation toolbar should be set
+    //bottom navigation toolbar should be set. Further, color settings are reset.
     @Override
     public void onResume(){
 

@@ -24,10 +24,12 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-
+/*
+Initial application setup. Inludes XML data file parser and splash screen setup.
+ */
 public class MainActivity extends AppCompatActivity {
-    public Button search;
-    public mapdata data;
+
+    public mapdata data; //Populated by all data in assets file, data.xml; passed to other app activities
     private static int SPLASH_TIME_OUT = 1500;
     private static String colorValue;
     SharedPreferences colorPreferences; //1 = Green, 2 = Orange
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         //Initiates data parsing
         data = new mapdata();
 
+        //Sets up and calls parser function.
         XmlPullParserFactory pullParserFactory;
         try {
             pullParserFactory = XmlPullParserFactory.newInstance();
@@ -79,41 +82,47 @@ public class MainActivity extends AppCompatActivity {
         }, SPLASH_TIME_OUT);
     }
 
+    //Data parser.
     private void parseXML(XmlPullParser parser) throws XmlPullParserException,IOException {
-        data.buildings = null; //Move this to a constructor later.
+
         int eventType = parser.getEventType();
+
+        //Temporary variables with which to fill data structure.
         mapdata.building currentBuilding = null;
         mapdata.floor currentFloor = null;
-        mapdata.room currentRoom;
+        mapdata.room currentRoom = null;
 
         while(eventType != XmlPullParser.END_DOCUMENT) {
-            String name;
+
+            String name; //Temporary variable to store parsed label.
+
             switch(eventType) {
                 case XmlPullParser.START_DOCUMENT:
                     break;
 
+                //Cases for distinct data-type possibilities.
                 case XmlPullParser.START_TAG:
                     name = parser.getName();
+
                     if(name.equals("campus")) {
                         data.buildings = new ArrayList<>();
                         data.campusName = parser.getAttributeValue(null, "campusName");
                         data.numberofBuildings = Integer.parseInt(parser.getAttributeValue(null, "numberOfBuildings"));
-                    } else if(name.equals("building") && currentBuilding == null) {
+                    }
+
+                    else if(name.equals("building") && currentBuilding == null) {
                         currentBuilding = new mapdata.building();
                         currentBuilding.floors = new ArrayList<>();
                         currentBuilding.buildingName = parser.getAttributeValue(null, "buildingName");
                         currentBuilding.numberofFloors = Integer.parseInt(parser.getAttributeValue(null, "numberOfFloors"));
-                    } else if(currentBuilding != null) {
+                    }
+
+                    else if(currentBuilding != null) {
                         if(name.equals("floor") && currentFloor == null) {
                             currentFloor = new mapdata.floor();
                             currentFloor.level = Integer.parseInt(parser.getAttributeValue(null,"level"));
                             currentFloor.rooms = new ArrayList<>();
                             currentFloor.image = parser.getAttributeValue(null, "src");
-                            //Example of how to load a drawable from string
-                            /*Context context = getApplicationContext();
-                            int id = context.getResources().getIdentifier(parser.getAttributeValue(null, "src"), "drawable", getPackageName());
-                            Drawable d = getResources().getDrawable(id);
-                            */
                         }
                         else if(currentFloor != null) {
                             if(name.equals("room")) {
@@ -125,12 +134,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
 
+                //At the end of the tag, populates the data structure with stored values from data within tags.
                 case XmlPullParser.END_TAG:
                     name = parser.getName();
+
                     if(name.equalsIgnoreCase("building") && currentBuilding != null) {
                         data.buildings.add(currentBuilding);
                         currentBuilding = null;
-                    } else if(name.equalsIgnoreCase("floor") && currentFloor != null && currentBuilding != null) {
+                    }
+
+                    else if(name.equalsIgnoreCase("floor") && currentFloor != null && currentBuilding != null) {
                         currentBuilding.floors.add(currentFloor);
                         currentFloor = null;
                     }
